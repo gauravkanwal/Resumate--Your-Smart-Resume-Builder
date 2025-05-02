@@ -34,13 +34,13 @@ function Footer() {
           <h2 className="font-semibold text-lg mb-2">Connect</h2>
           <ul className="md:flex md:gap-5">
             <li>
-              <a href="mailto:support@resumate.com" className="hover:underline">
-                support@resumate.com
+              <a href="mailto:kanwalgk25@gmail.com" className="hover:underline">
+                kanwalgk25@gmail.com
               </a>
             </li>
             <li>
               <a
-                href="https://github.com/yourusername/resumate"
+                href="https://github.com/gauravkanwal/Resumate--Your-Smart-Resume-Builder.git"
                 target="_blank"
                 className="hover:underline"
               >

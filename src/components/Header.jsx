@@ -4,7 +4,7 @@ import { HiMiniBars3 } from "react-icons/hi2";
 import { RxCross2 } from "react-icons/rx";
 
 function Header() {
-  const [showNavigation, setShowNavigation] = useState(true);
+  const [showNavigation, setShowNavigation] = useState(false);
   return (
     <div className="bg-[var(--black)] md:h-25">
       <div className="w-full flex justify-between px-10 py-4 md:p-8 text-white md:items-center h-full md:justify-evenly md:gap-4 md:px-20">
@@ -27,19 +27,19 @@ function Header() {
         </NavLink>
         <div className="flex flex-col md:flex-row md:w-full md:justify-evenly justify-center md:ml-10">
           <div className="md:hidden w-full flex justify-end">
-            {showNavigation ? (
+            {!showNavigation ? (
               <HiMiniBars3
                 className="w-7 h-7"
-                onClick={() => setShowNavigation(false)}
+                onClick={() => setShowNavigation(true)}
               />
             ) : (
               <RxCross2
                 className="w-7 h-7"
-                onClick={() => setShowNavigation(true)}
+                onClick={() => setShowNavigation(false)}
               />
             )}
           </div>
-          <div className={`${showNavigation?"hidden":"flex flex-col"} md:flex md:w-full md:justify-evenly`}>
+          <div className={`${showNavigation?"flex flex-col":"hidden"} md:flex md:w-full md:justify-evenly`}>
             <NavLink
               to="/personal-info"
               className={({ isActive }) =>
