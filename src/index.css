@@ -1,0 +1,117 @@
+@import "tailwindcss";
+/* Resumate */
+:root {
+  --black: #141301;
+  --blue: #0826e7;
+  --off-white: #e5e7e6;
+  --light-blue:#5e60ce;
+  --light-blue2:#5390d9;
+}
+
+.gradient-bg {
+    background: #7e7ef7;
+background: linear-gradient(229deg, rgba(126, 126, 247, 1) 0%, rgba(42, 42, 201, 1) 19%, rgba(18, 14, 14, 1) 100%);
+}
+
+.inputDiv{
+  width: 100%;
+}
+
+.inputForm{
+  display: flex;
+  flex-direction: column;
+  gap:2rem;
+}
+.inputLabel{
+  display: block;
+  font: size 0.875rem;
+  margin-bottom: 0.5rem;
+}
+.input {
+  width: 100%;
+  max-width: 500px;
+  border: 1px solid var(--blue); /* Default border */
+  border-radius: 4px; /* Optional: Rounded corners */
+  padding: 0.5rem; /* Optional: Add padding */
+  outline: none; /* Removes the default yellow outline */
+}
+
+.input:focus {
+  border: 2px solid var(--blue); 
+  box-shadow: 0 0 4px var(--blue);
+}
+
+.submitButton {
+  width:120px;
+  padding: 0.5rem 1rem; /* Adds padding for better spacing */
+  background-color: var(--blue); /* Button background color */
+  color: white; /* Text color */
+  border: none; /* Removes default border */
+  border-radius: 4px; /* Optional: Adds rounded corners */
+  cursor: pointer; /* Changes cursor to pointer on hover */
+  &:hover{
+    color: black;
+  }
+}
+
+#resume-preview {
+  color: #000; /* Ensure text color is supported */
+  background-color: #fff; /* Ensure background color is supported */
+  font-family: Arial, sans-serif; /* Use a widely supported font */
+  box-shadow: none; /* Remove shadows for better PDF rendering */
+  border-radius: 0; /* Remove rounded corners for compatibility */
+}
+
+#resume-preview a {
+  color: #0000EE; /* Use standard link color */
+  text-decoration: underline; /* Ensure links are visible */
+}
+
+@media (max-width: 768px) {
+  #resume-preview {
+    width: 100%;
+    min-height: auto;
+    max-height: none;
+    padding: 10px;
+    border: none;
+  }
+
+  #resume-preview h1 {
+    font-size: 20px;
+  }
+
+  #resume-preview h2 {
+    font-size: 18px;
+  }
+
+  #resume-preview p, #resume-preview li {
+    font-size: 12px;
+  }
+
+  #resume-preview div {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  #resume-preview {
+    padding: 5px;
+    font-size: 10px;
+  }
+
+  #resume-preview h1 {
+    font-size: 18px;
+  }
+
+  #resume-preview h2 {
+    font-size: 16px;
+  }
+
+  #resume-preview p, #resume-preview li {
+    font-size: 10px;
+  }
+
+  #resume-preview div {
+    margin-top: 5px;
+  }
+}
