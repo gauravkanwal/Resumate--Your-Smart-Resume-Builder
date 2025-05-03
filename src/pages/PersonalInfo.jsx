@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import { useResume } from "../context/ResumeContext";
 import { useNavigate } from "react-router";
 
@@ -16,6 +16,19 @@ function PersonalInfo() {
     summary: resumeData.personal.summary,
   });
 
+    // Synchronize local state with context when resumeData changes
+    useEffect(() => {
+      setPersonalInfo({
+        name: resumeData.personal.name,
+        role: resumeData.personal.role,
+        email: resumeData.personal.email,
+        phone: resumeData.personal.phone,
+        address: resumeData.personal.address,
+        website: resumeData.personal.website,
+        summary: resumeData.personal.summary,
+      });
+    }, [resumeData]);
+  
   // Handle input changes
   const handleChange = (e) => {
     const { name, value } = e.target;

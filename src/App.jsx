@@ -20,7 +20,7 @@ function App() {
             <Outlet />
           </div>
           {!hidePreviewRoutes.includes(location.pathname) && (
-            <div className="hidden w-100 md:min-h-200 md:flex flex-col justify-start h-fit overflow-y-hidden overflow-x-hidden" style={{ marginTop: 0, paddingTop: 0 }}>
+            <div className="hidden w-100 md:min-h-200 lg:flex flex-col justify-start h-fit overflow-y-hidden overflow-x-hidden" style={{ marginTop: 0, paddingTop: 0 }}>
               <div className="scale-50 absolute -top-40 left-250 cursor-pointer"
               onClick={()=>Navigate('/preview')}>
                 <Preview />
